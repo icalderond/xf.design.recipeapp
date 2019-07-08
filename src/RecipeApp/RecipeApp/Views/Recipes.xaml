@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:models="clr-namespace:RecipeApp.Models"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecipeApp.Views.Recipes">
+    <ContentPage.Resources>
+        <x:Array Type="{x:Type models:Recipe}" x:Key="TodayRecipes">
+            <models:Recipe Name="Vegetable sandiwch with scrombled eggs" Chef="Dione Hisson"
+                ImageSource="meal0" />
+            <models:Recipe Name="Vegetable sandiwch with scrombled eggs" Chef="Dione Hisson"
+                ImageSource="meal1" />
+            <models:Recipe Name="Vegetable sandiwch with scrombled eggs" Chef="Dione Hisson"
+                ImageSource="meal2" />
+            <models:Recipe Name="Vegetable sandiwch with scrombled eggs" Chef="Dione Hisson"
+                ImageSource="meal0" />
+        </x:Array>
+        <DataTemplate x:Key="TodayRecipesTemplate">
+            <ContentView>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding ImageSource}" Grid.Column="0" />
+                    <StackLayout BackgroundColor="Red" Grid.Column="1">
+                        <Label Text="{Binding Name}" LineBreakMode="WordWrap" />
+                    </StackLayout>
+                </Grid>
+            </ContentView>
+        </DataTemplate>
+        <GridItemsLayout Orientation="Horizontal" x:Key="ItemLayout" />
+    </ContentPage.Resources>
+    <Grid Margin="10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <SearchBar BackgroundColor="Transparent" Grid.Row="0" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="Today's top recipes" FontSize="Medium"
+                Grid.Row="0" />
+            <CollectionView Grid.Row="1" ItemsSource="{StaticResource TodayRecipes}"
+                ItemTemplate="{StaticResource TodayRecipesTemplate}" ItemsLayout="{StaticResource ItemLayout}" />
+        </Grid>
+    </Grid>
+</ContentPage>

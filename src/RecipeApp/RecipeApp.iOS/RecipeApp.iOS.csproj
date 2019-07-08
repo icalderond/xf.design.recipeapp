@@ -134,4 +134,9 @@
       <Name>RecipeApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\meal2.jpeg" />
+    <BundleResource Include="Resources\meal0.png" />
+    <BundleResource Include="Resources\meal1.png" />
+  </ItemGroup>
 </Project>
