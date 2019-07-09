@@ -125,7 +125,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Xamarin.Forms.PancakeView">
+      <Version>1.0.21</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -138,5 +141,7 @@
     <BundleResource Include="Resources\meal2.jpeg" />
     <BundleResource Include="Resources\meal0.png" />
     <BundleResource Include="Resources\meal1.png" />
+    <BundleResource Include="Resources\dish1.jpg" />
+    <BundleResource Include="Resources\dish0.png" />
   </ItemGroup>
 </Project>

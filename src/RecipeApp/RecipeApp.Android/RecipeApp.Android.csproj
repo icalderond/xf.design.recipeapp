@@ -59,7 +59,10 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Xamarin.Forms.PancakeView">
+      <Version>1.0.21</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -88,6 +91,11 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\dish0.png" />
+    <AndroidResource Include="Resources\drawable\dish1.jpg" />
+    <AndroidResource Include="Resources\drawable\meal0.png" />
+    <AndroidResource Include="Resources\drawable\meal1.png" />
+    <AndroidResource Include="Resources\drawable\meal2.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
