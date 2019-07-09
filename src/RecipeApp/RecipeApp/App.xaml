@@ -4,6 +4,10 @@
     xmlns:models="clr-namespace:RecipeApp.Models" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     mc:Ignorable="d" x:Class="RecipeApp.App">
     <Application.Resources>
+        <!--        Variables-->
+        <Color x:Key="PrimaryTextColor">#322E2D</Color>
+        <!--        Variables-->
+        <!--        Dummy data-->
         <x:Array Type="{x:Type models:Recipe}" x:Key="TodayRecipes">
             <models:Recipe Name="Vegetable sandiwch with scrombled eggs" Chef="Dione Hisson"
                 ImageSource="meal0" />
@@ -24,6 +28,16 @@
             <models:Recipe Name="Vegetable sandiwch with scrombled eggs" Chef="Dione Hisson"
                 ImageSource="dish1.jpg" />
         </x:Array>
+        <x:Array Type="{x:Type models:Recipe}" x:Key="Ingredients">
+            <models:Recipe Name="2 Asparagus" ImageSource="asparagus.jpeg" />
+            <models:Recipe Name="1pc Chicken" ImageSource="chicken.jpeg" />
+            <models:Recipe Name="2 Asparagus" ImageSource="asparagus.jpeg" />
+            <models:Recipe Name="1pc Chicken" ImageSource="chicken.jpe" />
+            <models:Recipe Name="2 Asparagus" ImageSource="asparagus.jpeg" />
+            <models:Recipe Name="1pc Chicken" ImageSource="chicken.jpe" />
+        </x:Array>
+        <!--        Dummy data-->
+        <!--        Templates-->
         <DataTemplate x:Key="TodayRecipesTemplate">
             <ContentView>
                 <yummy:PancakeView CornerRadius="20" BackgroundColor="White"
@@ -103,6 +117,17 @@
                 </yummy:PancakeView>
             </ContentView>
         </DataTemplate>
+        <DataTemplate x:Key="IngredientsTemplate">
+            <ContentView>
+                <StackLayout WidthRequest="100" Margin="0,0,15,0">
+                    <yummy:PancakeView CornerRadius="5" BackgroundColor="White">
+                        <Image Source="{Binding ImageSource}" />
+                    </yummy:PancakeView>
+                    <Label Text="{Binding Name}" />
+                </StackLayout>
+            </ContentView>
+        </DataTemplate>
+        <!--        Templates-->
         <GridItemsLayout Orientation="Horizontal" x:Key="ItemLayout" />
     </Application.Resources>
 </Application>

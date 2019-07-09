@@ -96,6 +96,10 @@
     <AndroidResource Include="Resources\drawable\meal0.png" />
     <AndroidResource Include="Resources\drawable\meal1.png" />
     <AndroidResource Include="Resources\drawable\meal2.jpeg" />
+    <AndroidResource Include="Resources\drawable\heart.png" />
+    <AndroidResource Include="Resources\drawable\chicken.jpeg" />
+    <AndroidResource Include="Resources\drawable\asparagus.jpeg" />
+    <AndroidResource Include="Resources\drawable\meal3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

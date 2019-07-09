@@ -3,8 +3,6 @@
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     ios:Page.UseSafeArea="true" x:Class="RecipeApp.Views.Recipes"
     BackgroundColor="#e9e9ea">
-    <ContentPage.Resources>
-    </ContentPage.Resources>
     <Grid Margin="10,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -24,7 +22,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Label Text="Today's top recipes" FontSize="Medium"
-                Grid.Row="0" />
+                Grid.Row="0" TextColor="{StaticResource PrimaryTextColor}" />
             <CollectionView Grid.Row="1" ItemsSource="{StaticResource TodayRecipes}"
                 ItemTemplate="{StaticResource TodayRecipesTemplate}" ItemsLayout="{StaticResource ItemLayout}" />
         </Grid>
@@ -34,7 +32,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Label Text="Categories" FontSize="Medium"
-                Grid.Row="0" />
+                TextColor="{StaticResource PrimaryTextColor}" Grid.Row="0" />
             <CollectionView Grid.Row="1" ItemsSource="{StaticResource Plates}"
                 ItemTemplate="{StaticResource PlatesTemplate}" ItemsLayout="{StaticResource ItemLayout}" />
         </Grid>
@@ -44,7 +42,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Label Text="Recommended for you" FontSize="Medium"
-                Grid.Row="0" />
+                TextColor="{StaticResource PrimaryTextColor}" Grid.Row="0" />
             <CollectionView Grid.Row="1" ItemsSource="{StaticResource Plates}"
                 ItemTemplate="{StaticResource PlatesTemplate}" ItemsLayout="{StaticResource ItemLayout}" />
         </Grid>
@@ -54,7 +52,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Label Text="Latest promo" FontSize="Large"
-                Grid.Row="0" />
+                TextColor="{StaticResource PrimaryTextColor}" Grid.Row="0" />
             <CollectionView Grid.Row="1" ItemsSource="{StaticResource Plates}"
                 ItemTemplate="{StaticResource LatestTemplate}" ItemsLayout="{StaticResource ItemLayout}" />
         </Grid>
